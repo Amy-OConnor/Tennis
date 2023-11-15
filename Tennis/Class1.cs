@@ -23,7 +23,8 @@
 
         public string GetScore()
         {
-            if (m_score1 == m_score2)
+            var scoresAreEven= m_score1 == m_score2;
+            if (scoresAreEven)
             {
                 return EvenScores();
             }
