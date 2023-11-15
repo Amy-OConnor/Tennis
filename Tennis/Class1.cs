@@ -27,7 +27,7 @@
             
             if (m_score1 == m_score2)
             {
-                score = EvenScores();
+                return EvenScores();
             }
             else if (m_score1 >= 4 || m_score2 >= 4)
             {
