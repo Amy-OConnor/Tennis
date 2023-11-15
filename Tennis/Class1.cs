@@ -31,10 +31,7 @@
             {
                 return EndOfSetScore();
             }
-            else
-            {
-                return OddMidSetScores();
-            }
+            return OddMidSetScores();
         }
 
         private string OddMidSetScores()
