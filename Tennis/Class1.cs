@@ -23,8 +23,6 @@
 
         public string GetScore()
         {
-            string score = "";
-            
             if (m_score1 == m_score2)
             {
                 return EvenScores();
@@ -35,9 +33,8 @@
             }
             else
             {
-                score = OddMidSetScores();
+                return OddMidSetScores();
             }
-            return score;
         }
 
         private string OddMidSetScores()
