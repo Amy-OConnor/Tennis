@@ -50,24 +50,31 @@
                     tempScore = m_score2;
                 }
 
-                switch (tempScore)
-                {
-                    case 0:
-                        score += "Love";
-                        break;
-                    case 1:
-                        score += "Fifteen";
-                        break;
-                    case 2:
-                        score += "Thirty";
-                        break;
-                    case 3:
-                        score += "Forty";
-                        break;
-                }
+                score = AppendScore(tempScore, score);
             }
 
             return score;
+        }
+
+        private static string AppendScore(int score, string inputString)
+        {
+            switch (score)
+            {
+                case 0:
+                    inputString += "Love";
+                    break;
+                case 1:
+                    inputString += "Fifteen";
+                    break;
+                case 2:
+                    inputString += "Thirty";
+                    break;
+                case 3:
+                    inputString += "Forty";
+                    break;
+            }
+
+            return inputString;
         }
 
         private string EndOfSetScore()
