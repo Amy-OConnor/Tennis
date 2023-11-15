@@ -24,7 +24,7 @@
         public string GetScore()
         {
             string score = "";
-            var tempScore = 0;
+            
             if (m_score1 == m_score2)
             {
                 score = EvenScores();
@@ -35,6 +35,7 @@
             }
             else
             {
+                var tempScore = 0;
                 for (var i = 1; i < 3; i++)
                 {
                     if (i == 1) tempScore = m_score1;
