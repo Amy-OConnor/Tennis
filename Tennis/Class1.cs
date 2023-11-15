@@ -40,9 +40,9 @@
         private string OddMidSetScores()
         {
             string score = "";
-            var tempScore = 0;
             for (var i = 1; i < 3; i++)
             {
+                var tempScore = 0;
                 if (i == 1) tempScore = m_score1;
                 else
                 {
