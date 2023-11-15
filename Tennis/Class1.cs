@@ -28,7 +28,9 @@
             {
                 return EvenScores();
             }
-            if (m_score1 >= 4 || m_score2 >= 4)
+
+            var isEndOfSet = m_score1 >= 4 || m_score2 >= 4;
+            if (isEndOfSet)
             {
                 return EndOfSetScore();
             }
