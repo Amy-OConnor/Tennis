@@ -29,9 +29,9 @@
             {
                 return EvenScores();
             }
-            else if (m_score1 >= 4 || m_score2 >= 4)
+            if (m_score1 >= 4 || m_score2 >= 4)
             {
-                score = EndOfSetScore();
+                return EndOfSetScore();
             }
             else
             {
