@@ -48,7 +48,7 @@
             score += "-";
             tempScore = player2Score;
 
-            score = AppendScore(tempScore, score);
+            score = AppendScore(player2Score, score);
 
             return score;
         }
