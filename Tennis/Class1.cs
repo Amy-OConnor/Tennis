@@ -40,14 +40,12 @@
         private string OddMidSetScores()
         {
             string score = "";
-
-            var i = 1;
+            
             var tempScore = 0;
             tempScore = player1Score;
 
             score = AppendScore(tempScore, score);
-
-            i++;
+            
             tempScore = 0;
             
             score += "-";
