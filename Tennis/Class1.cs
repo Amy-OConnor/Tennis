@@ -40,18 +40,29 @@
         private string OddMidSetScores()
         {
             string score = "";
-            for (var i = 1; i < 3; i++)
-            {
-                var tempScore = 0;
-                if (i == 1) tempScore = player1Score;
-                else
-                {
-                    score += "-";
-                    tempScore = player2Score;
-                }
 
-                score = AppendScore(tempScore, score);
+            var i = 1;
+            var tempScore = 0;
+            if (i == 1) tempScore = player1Score;
+            else
+            {
+                score += "-";
+                tempScore = player2Score;
             }
+
+            score = AppendScore(tempScore, score);
+
+            i++;
+            tempScore = 0;
+            
+            if (i == 1) tempScore = player1Score;
+            else
+            {
+                score += "-";
+                tempScore = player2Score;
+            }
+
+            score = AppendScore(tempScore, score);
 
             return score;
         }
