@@ -2,8 +2,8 @@
 {
     public class TennisGame1
     {
-        private int m_score1 = 0;
-        private int m_score2 = 0;
+        private int player1Score = 0;
+        private int player2Score = 0;
         private string player1Name;
         private string player2Name;
 
@@ -16,20 +16,20 @@
         public void WonPoint(string playerName)
         {
             if (playerName == "player1")
-                m_score1 += 1;
+                player1Score += 1;
             else
-                m_score2 += 1;
+                player2Score += 1;
         }
 
         public string GetScore()
         {
-            var scoresAreEven= m_score1 == m_score2;
+            var scoresAreEven= player1Score == player2Score;
             if (scoresAreEven)
             {
                 return EvenScores();
             }
 
-            var isEndOfSet = m_score1 >= 4 || m_score2 >= 4;
+            var isEndOfSet = player1Score >= 4 || player2Score >= 4;
             if (isEndOfSet)
             {
                 return EndOfSetScore();
@@ -43,11 +43,11 @@
             for (var i = 1; i < 3; i++)
             {
                 var tempScore = 0;
-                if (i == 1) tempScore = m_score1;
+                if (i == 1) tempScore = player1Score;
                 else
                 {
                     score += "-";
-                    tempScore = m_score2;
+                    tempScore = player2Score;
                 }
 
                 score = AppendScore(tempScore, score);
@@ -80,7 +80,7 @@
         private string EndOfSetScore()
         {
             string score;
-            var minusResult = m_score1 - m_score2;
+            var minusResult = player1Score - player2Score;
             if (minusResult == 1) score = "Advantage player1";
             else if (minusResult == -1) score = "Advantage player2";
             else if (minusResult >= 2) score = "Win for player1";
@@ -91,7 +91,7 @@
         private string EvenScores()
         {
             string score;
-            switch (m_score1)
+            switch (player1Score)
             {
                 case 0:
                     score = "Love-All";
