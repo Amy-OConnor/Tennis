@@ -41,12 +41,10 @@
         {
             string score = "";
             
-            var tempScore = 0;
-            tempScore = player1Score;
+            
+            var tempScore = player1Score;
 
             score = AppendScore(tempScore, score);
-            
-            tempScore = 0;
             
             score += "-";
             tempScore = player2Score;
