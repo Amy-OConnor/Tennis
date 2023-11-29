@@ -50,12 +50,8 @@
             i++;
             tempScore = 0;
             
-            if (i == 1) tempScore = player1Score;
-            else
-            {
-                score += "-";
-                tempScore = player2Score;
-            }
+            score += "-";
+            tempScore = player2Score;
 
             score = AppendScore(tempScore, score);
 
