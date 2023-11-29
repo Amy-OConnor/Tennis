@@ -39,15 +39,7 @@
 
         private string OddMidSetScores()
         {
-            string score = "";
-
-            score += LabelForPoints(player1Score);
-            
-            score += "-";
-
-            score += LabelForPoints(player2Score);
-
-            return score;
+            return LabelForPoints(player1Score) + "-" + LabelForPoints(player2Score);
         }
 
         private static string LabelForPoints(int score)
