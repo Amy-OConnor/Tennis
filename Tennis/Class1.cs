@@ -43,12 +43,7 @@
 
             var i = 1;
             var tempScore = 0;
-            if (i == 1) tempScore = player1Score;
-            else
-            {
-                score += "-";
-                tempScore = player2Score;
-            }
+            tempScore = player1Score;
 
             score = AppendScore(tempScore, score);
 
