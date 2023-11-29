@@ -41,11 +41,11 @@
         {
             string score = "";
 
-            score = AppendScore(player1Score, score);
+            score += AppendScore(player1Score, score);
             
             score += "-";
 
-            score = AppendScore(player2Score, score);
+            score += AppendScore(player2Score, score);
 
             return score;
         }
@@ -55,20 +55,16 @@
             switch (score)
             {
                 case 0:
-                    inputString += "Love";
-                    break;
+                    return "Love";
                 case 1:
-                    inputString += "Fifteen";
-                    break;
+                    return "Fifteen";
                 case 2:
-                    inputString += "Thirty";
-                    break;
+                    return "Thirty";
                 case 3:
-                    inputString += "Forty";
-                    break;
+                    return "Forty";
             }
 
-            return inputString;
+            return "";
         }
 
         private string EndOfSetScore()
