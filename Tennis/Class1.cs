@@ -41,16 +41,16 @@
         {
             string score = "";
 
-            score += AppendScore(player1Score, score);
+            score += LabelForPoints(player1Score);
             
             score += "-";
 
-            score += AppendScore(player2Score, score);
+            score += LabelForPoints(player2Score);
 
             return score;
         }
 
-        private static string AppendScore(int score, string inputString)
+        private static string LabelForPoints(int score)
         {
             switch (score)
             {
