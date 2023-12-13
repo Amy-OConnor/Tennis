@@ -57,6 +57,7 @@
             if (player1Score == player2Score + 1) return "Advantage player1";
             if (player2Score == player1Score + 1) return "Advantage player2";
             if (player1Score == player2Score + 2) return "Win for player1";
+            if (player1Score == player2Score) return "Deuce";
             return "Win for player2";
         }
 
