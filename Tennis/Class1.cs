@@ -56,12 +56,10 @@
 
         private string EndOfSetScore()
         {
-            string score;
             if (player1Score == player2Score + 1) return "Advantage player1";
-            else if (player2Score == player1Score + 1) return "Advantage player2";
-            else if (player1Score == player2Score + 2) return "Win for player1";
-            else return "Win for player2";
-            return score;
+            if (player2Score == player1Score + 1) return "Advantage player2";
+            if (player1Score == player2Score + 2) return "Win for player1";
+            return "Win for player2";
         }
 
         private string EvenScores()
