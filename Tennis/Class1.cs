@@ -34,11 +34,6 @@
             {
                 return EndOfSetScore();
             }
-            return OddMidSetScores();
-        }
-
-        private string OddMidSetScores()
-        {
             return LabelForPoints(player1Score) + "-" + LabelForPoints(player2Score);
         }
 
