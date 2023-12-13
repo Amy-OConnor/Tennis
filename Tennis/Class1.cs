@@ -23,18 +23,16 @@
 
         public string GetScore()
         {
+            var isEndOfSet = player1Score >= 4 || player2Score >= 4;
             var scoresAreEven= player1Score == player2Score;
+            
             if (scoresAreEven)
             {
                 return EvenScores();
             }
-
-            var isEndOfSet = player1Score >= 4 || player2Score >= 4;
-            if (isEndOfSet)
-            {
-                return EndOfSetScore();
-            }
-            return LabelForPoints(player1Score) + "-" + LabelForPoints(player2Score);
+            
+            if (!isEndOfSet) return LabelForPoints(player1Score) + "-" + LabelForPoints(player2Score);
+            return EndOfSetScore();
         }
 
         private static string LabelForPoints(int score)
