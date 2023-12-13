@@ -57,7 +57,6 @@
         private string EndOfSetScore()
         {
             string score;
-            var minusResult = player1Score - player2Score;
             if (player1Score == player2Score + 1) score = "Advantage player1";
             else if (player2Score == player1Score + 1) score = "Advantage player2";
             else if (player1Score == player2Score + 2) score = "Win for player1";
